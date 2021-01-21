@@ -1,4 +1,5 @@
-﻿using PaymentContext.Shared.ValueObjects;
+﻿using Flunt.Validations;
+using PaymentContext.Shared.ValueObjects;
 
 namespace PaymentContext.Domain.ValueObjects
 {
@@ -12,8 +13,14 @@ namespace PaymentContext.Domain.ValueObjects
             FirstName = firstName;
             LastName = lastName;
 
-            if (string.IsNullOrEmpty(FirstName))
-                AddNotification("FirstName", "Name invalid");
+            AddNotifications(new Contract()
+                .Requires()
+                .HasMinLen(FirstName, 3, "Name.FirstName", "Name must have characters minimum")
+                .HasMaxLen(FirstName, 40, "Name.FirstName", "Name must have 40 characters maximum ")
+
+                .HasMinLen(LastName, 3, "Name.LastName", "Last Name must have 3 characters minimum")
+                .HasMaxLen(LastName, 40, "Name.LastName", "Last Name must have 40 characters maximum ")
+            );
         }
     }
 }
