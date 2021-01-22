@@ -19,7 +19,7 @@ namespace PaymentContext.Domain.ValueObjects
                 .HasMaxLen(FirstName, 40, "Name.FirstName", "Name must have 40 characters maximum ")
 
                 .HasMinLen(LastName, 3, "Name.LastName", "Last Name must have 3 characters minimum")
-                .HasMaxLen(LastName, 40, "Name.LastName", "Last Name must have 40 characters maximum ")
+                .HasMaxLen(LastName, 40, "Name.LastName", "Last Name must have 40 characters maximum")
             );
         }
     }
