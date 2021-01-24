@@ -38,6 +38,5 @@ namespace PaymentContext.Tests.ValueObjects
             var doc = new Document("34225545806", EDocumentType.CPF);
             Assert.IsTrue(doc.Valid);
         }
-
     }
 }

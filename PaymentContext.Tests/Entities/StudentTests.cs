@@ -1,15 +1,14 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PaymentContext.Domain.Entities;
 using PaymentContext.Domain.Enums;
 using PaymentContext.Domain.ValueObjects;
+using System;
 
 namespace PaymentContext.Tests.Entities
 {
     [TestClass]
     public class StudentTests
     {
-
         private readonly Name _name;
         private readonly Document _document;
         private readonly Address _address;

@@ -1,5 +1,5 @@
-using System;
 using PaymentContext.Domain.ValueObjects;
+using System;
 
 namespace PaymentContext.Domain.Entities
 {
@@ -30,6 +30,5 @@ namespace PaymentContext.Domain.Entities
 
         public string BarCode { get; private set; }
         public string BoletoNumber { get; private set; }
-
     }
 }

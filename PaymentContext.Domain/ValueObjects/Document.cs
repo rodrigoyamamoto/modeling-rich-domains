@@ -28,6 +28,7 @@ namespace PaymentContext.Domain.ValueObjects
                 case EDocumentType.CNPJ when Number.Length == 14:
                 case EDocumentType.CPF when Number.Length == 11:
                     return true;
+
                 default:
                     return false;
             }
